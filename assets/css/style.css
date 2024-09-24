@@ -10,7 +10,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: rgba(255, 255, 255, 0.726);
+  background: #050f1b;
 }
 
 a {
@@ -25,6 +26,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -261,7 +263,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: #050f1b;
 }
 
 .section-title {
@@ -424,7 +426,7 @@ section {
 }
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #050f1b;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
