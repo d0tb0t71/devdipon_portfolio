@@ -217,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  padding: 20px;
 }
 #hero h1 {
   margin: 0 0 10px 0;
@@ -275,7 +276,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: rgba(255, 255, 255, 0.92);
 }
 .section-title h2::after {
   content: "";
@@ -407,7 +408,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: rgba(255, 255, 255, 0.80);
 }
 .resume .resume-item {
   padding: 0 0 20px 20px;
@@ -421,7 +422,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 10px;
 }
 .resume .resume-item h5 {
@@ -728,17 +729,17 @@ section {
 }
 .contact .info {
   padding: 30px;
-  background: #fff;
+  background: #050f1b;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #00aeff;
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #050f1b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -750,13 +751,13 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: rgba(255, 255, 255, 0.92);
 }
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #00aeff;
 }
 .contact .info .email p {
   padding-top: 5px;
@@ -789,7 +790,7 @@ section {
 .contact .php-email-form {
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background: #050f1b;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 .contact .php-email-form .form-group {
@@ -860,7 +861,7 @@ section {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
-  color: #fff;
+  color: #fff; 
   transition: 0.4s;
   border-radius: 4px;
 }
