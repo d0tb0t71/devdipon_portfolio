@@ -183,21 +183,33 @@
               </template>
           
               <script>
-                function createCard(title, iconUrl) {
+                function createCard(title, iconUrl, scale) {
                   const template = document.getElementById('card-template');
                   const clone = document.importNode(template.content, true);
+                  const iconImage = clone.querySelector('.icon-image');
+
                   clone.querySelector('.title').textContent = title;
-                  clone.querySelector('.icon-image').src = iconUrl;
+                  iconImage.src = iconUrl;
+
+                  // Apply scale using inline style
+                  iconImage.style.transform = `scale(${scale})`; // e.g., scale(0.8) or scale(1.2)
+
                   document.querySelector('.grid').appendChild(clone);
-                }
+}
           
                 // Example usage
-                createCard('iOS', 'https://img.icons8.com/?size=144&id=20821&format=png');
-                createCard('Swift', 'https://img.icons8.com/?size=144&id=24465&format=png');
-                createCard('SwiftUI', 'https://img.icons8.com/?size=144&id=_BTyk4vBumjx&format=png');
-                createCard('XCode', 'https://upload.wikimedia.org/wikipedia/ru/0/0c/Xcode_icon.png');
-                createCard('Android', 'https://img.icons8.com/?size=144&id=17836&format=png');
-                createCard('AndroidStudio', 'https://img.icons8.com/?size=144&id=04OFrkjznvcd&format=png');
+                createCard('iOS', 'https://img.icons8.com/?size=144&id=20821&format=png', 1); 
+                createCard('Swift', 'https://img.icons8.com/?size=144&id=24465&format=png', 1);
+                createCard('FFmpeg', 'https://img.icons8.com/?size=144&id=32418&format=png', 1);
+                createCard('SwiftUI', 'https://img.icons8.com/?size=144&id=_BTyk4vBumjx&format=png', 1); 
+                createCard('UIKit', 'https://img.icons8.com/?size=100&id=wvf2supDXcj7&format=png', 0.75);
+                createCard('Swift Package Manager', 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*xCgpmRX25lCK_zY4PgWifQ.png', 0.75);
+                createCard('XCode', 'https://upload.wikimedia.org/wikipedia/ru/0/0c/Xcode_icon.png', 0.9);
+                createCard('Android', 'https://img.icons8.com/?size=144&id=17836&format=png', 1);
+                createCard('C++', 'https://img.icons8.com/?size=144&id=40669&format=png', 1); 
+
+
+                
 
               </script>
             </div>
