@@ -728,6 +728,15 @@ section {
   margin-bottom: 0;
 }
 
+@media (max-width: 576px) {
+  .about img {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -755,7 +764,7 @@ section {
 }
 .facts .count-box p {
   padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 0px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: #122f57;
@@ -784,7 +793,7 @@ section {
 }
 .skills .progress .skill {
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 0 0;
   text-transform: uppercase;
   display: block;
   font-weight: 600;
@@ -804,6 +813,12 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #149ddd;
+}
+
+.skills .content{
+
+  align-items: center;
+
 }
 
 /*--------------------------------------------------------------
