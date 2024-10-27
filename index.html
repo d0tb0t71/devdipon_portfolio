@@ -77,7 +77,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in" style="padding: 20;">
       <h1>Dipon Sutradhar</h1>
-      <p>I'm a <span class="typed" data-typed-items="Software Engineer,Passionate Software Engineer,Software Engineer,Passionate Software Engineer"></span></p>
+      <p><span class="typed" data-typed-items="Software Engineer | iOS Developer, Expert in Swift | SwiftUI | UIKit | Swift Packages, Skilled in FFmpeg, Experienced in Swift and C++ Interoperability"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -304,122 +304,64 @@
       </div>
     </section><!-- End Resume Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container">
 
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Here I show some of my projects..</p>
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p>Here I show some of my projects..</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Card Template -->
+      <template id="portfolio-card-template">
+        <div class="portfolio-card">
+          <div class="ranking-badge">#</div>
+          <div class="screenshot">
+            <img src="" alt="App Screenshot">
+          </div>
+          <h3 class="app-title">App Name</h3>
+          <a href="#" class="details-button">Show Details <span>&rarr;</span></a>
         </div>
+      </template>
+      
+    </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
+  </div>
+</section><!-- End Portfolio Section -->
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+<script>
+  const portfolioGrid = document.querySelector('.portfolio-grid');
+  const template = document.getElementById('portfolio-card-template');
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+  // Function to add a new card from the template
+  function addPortfolioCard(rank, imageUrl, appName, detailsLink) {
+      // Clone the template content
+      const clone = document.importNode(template.content, true);
+      
+      // Update the cloned content
+      const card = clone.querySelector('.portfolio-card');
+      card.querySelector('.ranking-badge').textContent = `#${rank}`; // Dynamic rank
+      card.querySelector('.screenshot img').src = imageUrl;
+      card.querySelector('.screenshot img').alt = `${appName} Screenshot`;
+      card.querySelector('.app-title').textContent = appName;
+      card.querySelector('.details-button').href = detailsLink; // Set link to new page
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+      // Append the cloned card to the grid
+      portfolioGrid.appendChild(card);
+  }
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+  // Example usage with dynamic rank numbers and links to new pages
+  addPortfolioCard(1, "https://ln.run/4Ll8S", "Video Converter and Compressor", "details-page1.html");
+  addPortfolioCard(2, "https://ln.run/NPgro", "App Name 2", "vcon.html");
+  addPortfolioCard(3, "https://ln.run/4Ll8S", "App Name 3", "details-page3.html");
+  addPortfolioCard(4, "https://ln.run/4Ll8S", "App Name 4", "details-page4.html");
+  addPortfolioCard(5, "https://ln.run/4Ll8S", "App Name 5", "details-page5.html");
+  addPortfolioCard(6, "https://ln.run/4Ll8S", "App Name 6", "details-page6.html");
+</script>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
    
 
     <!-- ======= Contact Section ======= -->

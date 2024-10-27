@@ -874,108 +874,22 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
-
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
-}
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-.portfolio .portfolio-wrap .portfolio-links {
-  opacity: 1;
-  left: 0;
-  right: 0;
-  bottom: -60px;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-  display: flex;
-  justify-content: center;
-}
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background: rgba(20, 157, 221, 0.75);
-  transition: 0.3s;
-  width: 50%;
-}
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
-}
-.portfolio .portfolio-wrap .portfolio-links a + a {
-  border-left: 1px solid #37b3ed;
-}
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: 0;
-}
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
 }
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -983,13 +897,16 @@ section {
   opacity: 1;
   border: 1px solid #149ddd;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
+
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
 }
+
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
@@ -997,25 +914,128 @@ section {
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
+
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
+
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
+
 .portfolio-details .portfolio-description {
   padding-top: 30px;
 }
+
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
+.portfolio .portfolio-title {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: start;
+  color: #fff; 
+  font-size: 18px; 
+  font-weight: bold; 
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 5px 0; 
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+/* Responsive Grid Layout */
+.portfolio-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Portfolio Card Styles */
+.portfolio-card {
+  background-color: #1f2a35; /* Darker card background */
+  border: 1px solid #4a5568; /* Dark gray border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+  transition: transform 0.3s; /* Add hover effect */
+  margin: 15px;
+  padding: 20px; /* Add some padding */
+  text-align: center; /* Center the content */
+  position: relative; /* Ensure absolute positioning works */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Distribute space between items */
+  height: 460px; /* Increased fixed height for the card */
+}
+
+
+.portfolio-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Ranking Badge */
+.ranking-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ff5a5f; /* Vibrant background for the badge */
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add slight shadow for depth */
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+/* Screenshot Section */
+.screenshot img {
+  width: 100%; /* Ensure the image takes the full width */
+  height: 300px; /* Increased height for larger images */
+  object-fit: contain; /* Maintain aspect ratio and fill the area */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* App Title */
+.app-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.80);
+  margin: 0;
+}
+
+/* Button Styles */
+.details-button {
+  display: inline-block;
+  margin-top: 10px; /* Space above the button */
+  background-color: #007bff; /* Bright blue button background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px; /* Padding */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.details-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1376,3 +1396,5 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+
